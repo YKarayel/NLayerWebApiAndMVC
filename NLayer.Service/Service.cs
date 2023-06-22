@@ -22,8 +22,6 @@ namespace NLayer.Service
             _repository = repository;
         }
 
-      
-
         public async Task<T> AddAsync(T entity)
         {
             await _repository.AddAsync(entity);

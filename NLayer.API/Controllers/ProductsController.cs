@@ -6,6 +6,7 @@ using NLayer.Core.Models;
 using NLayer.Core.Services;
 using System.Data.SqlTypes;
 
+
 namespace NLayer.API.Controllers
 {
     [Route("api/[controller]")]
@@ -14,24 +15,35 @@ namespace NLayer.API.Controllers
     {
         private readonly IMapper _mapper;
         private readonly IService<Product> _service;
+        private readonly IProductService productService;
 
-        public ProductsController(IService<Product> service, IMapper mapper)
+        public ProductsController(IService<Product> service, IMapper mapper, IProductService productService)
         {
             _service = service;
             _mapper = mapper;
+            this.productService = productService;
         }
 
-        [HttpGet]  
+        // GET api/products/GetProductWithCategory
+        [HttpGet("[action]")]
+        public async Task<IActionResult> GetProductWithCategory() 
+        {
+            return CreateActionResult(await productService.GetProductWithCategory());
+        }
+
+
+
+        [HttpGet]
         public async Task<IActionResult> All()
         {
             var products = await _service.GetAllAsync();
             var productsDto = _mapper.Map<List<ProductDto>>(products.ToList());
             return CreateActionResult(CustomResponseDto<List<ProductDto>>.Success(200, productsDto));
+           
 
-            
         }
-        [HttpGet("{id}")] 
-        public async Task<IActionResult>  GetById(int id )
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(int id)
         {
 
             var product = await _service.GetByIdAsync(id);
@@ -54,7 +66,7 @@ namespace NLayer.API.Controllers
         public async Task<IActionResult> Update(ProductUpdateDto productDto)
         {
 
-            await _service.UpdateAsync(_mapper.Map<Product>(productDto));   
+            await _service.UpdateAsync(_mapper.Map<Product>(productDto));
             return CreateActionResult(CustomResponseDto<NoContentDto>.Success(204));
 
         }
