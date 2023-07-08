@@ -19,7 +19,6 @@ namespace NLayer.API.Controllers
                 };
             return new ObjectResult(response)
             { StatusCode = response.StatusCode };
-        }   
-               
+        }          
     }
 }

@@ -37,6 +37,7 @@ namespace NLayer.API.Controllers
             var products = await _service.GetAllAsync();
             var productsDto = _mapper.Map<List<ProductDto>>(products.ToList());
             return CreateActionResult(CustomResponseDto<List<ProductDto>>.Success(200, productsDto));
+            
            
 
         }
