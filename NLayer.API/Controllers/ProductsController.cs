@@ -1,14 +1,14 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using NLayer.API.Filters;
+using NLayer.Web.Filters;
 using NLayer.Core.DTOs;
 using NLayer.Core.Models;
 using NLayer.Core.Services;
 using System.Data.SqlTypes;
 
 
-namespace NLayer.API.Controllers
+namespace NLayer.Web.Controllers
 {
     
     public class ProductsController : CustomBaseController

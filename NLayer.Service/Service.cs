@@ -3,12 +3,7 @@ using NLayer.Core.Repositories;
 using NLayer.Core.Services;
 using NLayer.Core.UnitOfWorks;
 using NLayer.Service.Exceptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NLayer.Service
 {
@@ -57,14 +52,14 @@ namespace NLayer.Service
 
         public async Task RemoveAsync(T entity)
         {
-           _repository.Remove(entity);
+            _repository.Remove(entity);
             await _unitOfWork.CommitAsync();
         }
 
         public async Task RemoveRangeAsync(IEnumerable<T> entities)
         {
             _repository.RemoveRange(entities);
-            await _unitOfWork.CommitAsync(); 
+            await _unitOfWork.CommitAsync();
         }
 
         public async Task UpdateAsync(T entity)

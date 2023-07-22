@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Filters;
 using NLayer.Core.DTOs;
 
-namespace NLayer.API.Filters
+namespace NLayer.Web.Filters
 {
     public class ValidateFilterAttribute : ActionFilterAttribute
     {

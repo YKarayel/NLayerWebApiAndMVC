@@ -3,7 +3,7 @@ using NLayer.Core.DTOs;
 using NLayer.Service.Exceptions;
 using System.Text.Json;
 
-namespace NLayer.API.Middlewares
+namespace NLayer.Web.Middlewares
 {
     public static class UseCustomExceptionHandler
     {

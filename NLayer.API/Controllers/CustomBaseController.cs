@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using NLayer.Core.DTOs;
 
-namespace NLayer.API.Controllers
+namespace NLayer.Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

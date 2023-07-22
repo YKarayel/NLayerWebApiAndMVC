@@ -4,7 +4,7 @@ using NLayer.Core.DTOs;
 using NLayer.Core.Models;
 using NLayer.Core.Services;
 
-namespace NLayer.API.Filters
+namespace NLayer.Web.Filters
 {
     public class NotFoundFilter<T> : IAsyncActionFilter where T : BaseEntity
     {
