@@ -1,19 +1,19 @@
 ﻿
 @{
-    ViewData["Title"] = "Save";
+    ViewData["Title"] = "Update";
 }
 @model ProductDto
-<h1>Save Product</h1>
+<h1>Update Product</h1>
 
 <div class="row">
 
-    <div class= col-md-6>
-        <form asp-action="Save" method="post" asp-controller="Products">
-
+    <div class=col-md-6>
+        <form asp-action="Update" method="post" asp-controller="Products">
+            <input type="hidden" asp-for="Id" />
             <div class="from-group">
                 <label asp-for="Name"></label>
-                <input asp-for="Name" class="form-control"/>
-                <span asp-validation-for="Name" class ="text-danger"></span>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
             </div>
 
             <div class="from-group">
@@ -21,7 +21,7 @@
                 <input asp-for="Stock" class="form-control" />
                 <span asp-validation-for="Stock" class="text-danger"></span>
             </div>
-            
+
             <div class="from-group">
                 <label asp-for="Price"></label>
                 <input asp-for="Price" class="form-control" />
@@ -31,16 +31,13 @@
             <div class="from-group">
                 <label asp-for="CategoryId"></label>
                 <select asp-for="CategoryId" asp-items="ViewBag.categories" class="form-control"> </select>
-                
-            </div>
-			<div class="form-group">
-                <input type="submit" value="Save" class="btn-primary" />
-            </div>
 
-
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Update" class="btn-primary" />
+            </div>
         </form>
     </div>
-
 </div>
-    
+
 
