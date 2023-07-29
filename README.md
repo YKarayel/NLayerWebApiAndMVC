@@ -7,5 +7,5 @@ This project was made with N Layer Architecture 3 brench.
 
 
 This video belongs to Third Brench. Which is the scenario where both mvc and api are ready.
-https://github.com/YKarayel/NLayerWebApiAndMVC/assets/121500914/87512243-0b20-48e7-93d3-a935bae22b3b
 
+https://github.com/YKarayel/NLayerWebApiAndMVC/assets/121500914/1a90253d-4d12-4778-aa44-e743994018db
