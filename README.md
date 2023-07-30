@@ -10,7 +10,7 @@
 <ul>
   <li>Basic CRUD operations and more</li>
   <li>NLayer Architecture</li>
-  <li>DI and IOC Containers</li>
+  <li>DI and IOC Container (AutoFac)</li>
   <li>DTO's</li>
   <li>Validations</li>
   <li>Global Exception Handlers</li>
